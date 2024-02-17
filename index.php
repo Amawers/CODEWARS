@@ -1,10 +1,11 @@
 <?php
-function maximum($array)
+function invert(array $a): array
 {
-    return max($array);
+    $reversed = [];
+    for ($i = 0; $i < count($a); $i++) {
+        array_push($reversed, $a[$i] * -1);
+    }
+    return $reversed;
 }
-function minimum($array)
-{
-    return min($array);
-}
-maximum([1, 2, 3]);
+$x = invert([1, -2]);
+var_dump($x);
