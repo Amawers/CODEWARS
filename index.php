@@ -1,11 +1,7 @@
 <?php
-function invert(array $a): array
+function stringToNumber($str)
 {
-    $reversed = [];
-    for ($i = 0; $i < count($a); $i++) {
-        array_push($reversed, $a[$i] * -1);
-    }
-    return $reversed;
+    $parsed = (int) $str;
+    return $parsed;
 }
-$x = invert([1, -2]);
-var_dump($x);
+stringToNumber("123");
