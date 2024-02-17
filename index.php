@@ -1,14 +1,10 @@
 <?php
-function basicOp($op, $val1, $val2)
+function maximum($array)
 {
-  if($op == "+"){
-    return $val1 + $val2;
-  }else if($op == "-"){
-    return $val1 - $val2;
-  }else if($op == "*"){
-    return $val1 * $val2;
-  }else{
-    return $val1 / $val2;
-  }
+    return max($array);
 }
-basicOp ('+',5, 5);
+function minimum($array)
+{
+    return min($array);
+}
+maximum([1, 2, 3]);
