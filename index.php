@@ -1,7 +1,6 @@
 <?php
-function stringToNumber($str)
+function makeUpperCase(string $input): string
 {
-    $parsed = (int) $str;
-    return $parsed;
+    return strtoupper($input);
 }
-stringToNumber("123");
+makeUpperCase("abc");
