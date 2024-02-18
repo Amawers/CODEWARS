@@ -1,6 +1,16 @@
 <?php
-function zeroFuel($distanceToPump, $mpg, $fuelLeft)
+function quarterOf($month)
 {
-    return $mpg * $fuelLeft >= $distanceToPump ? true : false;
+    switch ($month) {
+        case in_array($month, range(1, 3)):
+            return 1;
+        case in_array($month, range(4, 6)):
+            return 2;
+        case in_array($month, range(7, 9)):
+            return 3;
+        case in_array($month, range(10, 12)):
+            return 4;
+    }
 }
-zeroFuel(50, 25, 2);
+$returned = quarterOf(11);
+echo $returned;
