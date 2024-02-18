@@ -1,11 +1,6 @@
 <?php
-function abbrevName($name)
+function zeroFuel($distanceToPump, $mpg, $fuelLeft)
 {
-    $arrStr = explode(" ", $name);
-    $fName = str_split($arrStr[0]);
-    $lName = str_split($arrStr[1]);
-
-    $final = strtoupper($fName[0]) . "." . strtoupper($lName[0]);
-    return $final;
+    return $mpg * $fuelLeft >= $distanceToPump ? true : false;
 }
-abbrevName("Sam Harris");
+zeroFuel(50, 25, 2);
