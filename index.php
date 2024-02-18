@@ -1,15 +1,12 @@
 <?php
-function find_average($array): float
-{
-    if(!$array){
-        return 0;
+function reverseSeq($n)
+{   
+    $loop = $n;
+    $arr = [];
+    for ($i = 0; $i < $loop; $i++) {
+        array_push($arr, $n);
+        $n--;
     }
-    $total = null;
-    for ($i = 0; $i < count($array); $i++) {
-        $total += $array[$i];
-    }
-    $average = $total / count($array);
-    return $average;
-}
-$returned = find_average([31, 35, 24]);
-echo $returned;
+    return $arr;
+};
+reverseSeq(5);
