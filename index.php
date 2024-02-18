@@ -1,6 +1,6 @@
 <?php
-function toJadenCase(string $string): string
+function smallestInteger($arr)
 {
-    return ucwords($string);
+    return sort($arr) ? $arr[0] : null;
 }
-toJadenCase("i love u why stalk my github?");
+smallestInteger([34, 15, 88, 2]);
