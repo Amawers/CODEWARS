@@ -1,6 +1,12 @@
 <?php
-function smallestInteger($arr)
+function positive_sum($arr)
 {
-    return sort($arr) ? $arr[0] : null;
+    $solve = [];
+    for ($i = 0; $i < count($arr); $i++) {
+        if ($arr[$i] > 0) {
+            array_push($solve, $arr[$i]);
+        }
+    }
+    return array_sum($solve);
 }
-smallestInteger([34, 15, 88, 2]);
+positive_sum([1, 2, 3, 4, 5]);
