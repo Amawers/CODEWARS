@@ -1,12 +1,6 @@
 <?php
-function reverseSeq($n)
+function string_to_array($s)
 {   
-    $loop = $n;
-    $arr = [];
-    for ($i = 0; $i < $loop; $i++) {
-        array_push($arr, $n);
-        $n--;
-    }
-    return $arr;
-};
-reverseSeq(5);
+    return explode(" ", $s);;
+}
+string_to_array("hello lods");
