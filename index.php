@@ -1,6 +1,6 @@
 <?php
-function solution($a, $x)
+function litres(float $t): int
 {
-    return in_array($x, $a);
+    return (int) floor($t * 0.50);
 }
-solution(['a', 'b', 'c'], 'a');
+litres(1);
