@@ -1,15 +1,16 @@
 <?php
-function getCount($str)
+function getMiddle($text)
 {
-    $vowelsCount = 0;
-    $split = str_split($str);
+    $split = str_split($text);
+    $check = count($split);
+    if($check % 2){
+        $middle = floor($check / 2);
+        return $split[$middle];
+    }else{
+        $first = ($check / 2) - 1;
+        $second = $check / 2;
 
-    foreach($split as $item){
-        if($item == "a" || $item == "e" || $item == "i" || $item == "o" || $item == "u"){
-            $vowelsCount++;
-        }
+        return $split[$first] . $split[$second];
     }
-
-    return $vowelsCount;
 }
-getCount("abracadabra");
+getMiddle("test");
