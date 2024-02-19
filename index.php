@@ -1,12 +1,15 @@
 <?php
-function positive_sum($arr)
+function getCount($str)
 {
-    $solve = [];
-    for ($i = 0; $i < count($arr); $i++) {
-        if ($arr[$i] > 0) {
-            array_push($solve, $arr[$i]);
+    $vowelsCount = 0;
+    $split = str_split($str);
+
+    foreach($split as $item){
+        if($item == "a" || $item == "e" || $item == "i" || $item == "o" || $item == "u"){
+            $vowelsCount++;
         }
     }
-    return array_sum($solve);
+
+    return $vowelsCount;
 }
-positive_sum([1, 2, 3, 4, 5]);
+getCount("abracadabra");
