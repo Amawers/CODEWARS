@@ -1,6 +1,6 @@
 <?php
-function litres(float $t): int
+function even_or_odd(int $n)
 {
-    return (int) floor($t * 0.50);
+    return $n % 2 ? "Odd" : "Even";
 }
-litres(1);
+even_or_odd(1);
