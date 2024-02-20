@@ -1,6 +1,11 @@
 <?php
-function even_or_odd(int $n)
+function nbYear($p0, $percent, $aug, $p)
 {
-    return $n % 2 ? "Odd" : "Even";
+    $count = 0;
+    while ($p0 < $p) {
+        $p0 = $p0 + floor($p0 * ($percent / 100)) + $aug;
+        $count++;
+    }
+    return $count;
 }
-even_or_odd(1);
+nbYear(1500, 5, 100, 5000);
