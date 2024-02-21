@@ -1,14 +1,6 @@
 <?php
-function fake_bin(string $s)
+function numberToString($num)
 {
-    $final = "";
-    for($i = 0; $i < strlen($s); $i++){
-        if($s[$i] < 5){
-            $final .= '0';
-        }else{
-            $final .= '1';
-        }
-    }
-    return $final;
+  return (string) $num;
 }
-fake_bin('129748');
+numberToString(123);
