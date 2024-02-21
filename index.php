@@ -1,6 +1,14 @@
 <?php
-function findNeedle($haystack)
+function fake_bin(string $s)
 {
-    return "found the needle at position " . array_search("needle", $haystack);
+    $final = "";
+    for($i = 0; $i < strlen($s); $i++){
+        if($s[$i] < 5){
+            $final .= '0';
+        }else{
+            $final .= '1';
+        }
+    }
+    return $final;
 }
-findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]);
+fake_bin('129748');
