@@ -1,6 +1,11 @@
 <?php
-function numberToString($num)
+function square_digits($num)
 {
-  return (string) $num;
+    $converted = (string) $num;
+    $final_str = "";
+    for($i = 0; $i < strlen($converted); $i++){
+        $final_str .= $converted[$i] * $converted[$i];
+    }
+    return (int) $final_str;
 }
-numberToString(123);
+square_digits(9119);
