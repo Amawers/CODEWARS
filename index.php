@@ -1,11 +1,14 @@
 <?php
-function square_digits($num)
+function past($h, $m, $s)
 {
-    $converted = (string) $num;
-    $final_str = "";
-    for($i = 0; $i < strlen($converted); $i++){
-        $final_str .= $converted[$i] * $converted[$i];
+    $ms = 0;
+    $ms += $h * 60 * 60 * 1000;
+    $ms += $m * 60 * 1000;
+    $ms += $s * 1000;
+    if ($ms > 0) {
+        return $ms;
+    }else{
+        return 0;
     }
-    return (int) $final_str;
 }
-square_digits(9119);
+past(0, 1, 1);
