@@ -1,6 +1,12 @@
 <?php
-function enough($cap, $on, $wait)
+function countsheep($num)
 {
-    return $on + $wait <= $cap ? 0 : ($on + $wait) - $cap;
+    $str = "";
+    if($num > 0){
+        for($i = 1; $i < $num + 1; $i++){
+            $str .= "$i sheep...";
+        }
+    }
+    return $str;
 }
-enough(10, 5, 5);
+countsheep(2);
