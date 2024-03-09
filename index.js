@@ -1,4 +1,4 @@
-function otherAngle(a, b) {
-  return 180 - (a + b)
+function smash(words) {
+  return words.join(' ')
 }
-otherAngle(60, 60)
+smash(['hello', 'world', 'this', 'is', 'great'])
