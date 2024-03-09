@@ -1,4 +1,4 @@
-function booleanToString(b) {
-  return `${b}`
+function DNAtoRNA(dna) {
+  return dna.replaceAll('T', 'U')
 }
-booleanToString(true)
+DNAtoRNA('TTT')
