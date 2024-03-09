@@ -1,4 +1,4 @@
-function DNAtoRNA(dna) {
-  return dna.replaceAll('T', 'U')
+function removeExclamationMarks(s) {
+  return s.replaceAll('!', '')
 }
-DNAtoRNA('TTT')
+removeExclamationMarks('tes!')
