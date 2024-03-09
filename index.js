@@ -1,4 +1,4 @@
-function removeExclamationMarks(s) {
-  return s.replaceAll('!', '')
+function otherAngle(a, b) {
+  return 180 - (a + b)
 }
-removeExclamationMarks('tes!')
+otherAngle(60, 60)
